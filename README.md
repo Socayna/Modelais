@@ -103,7 +103,7 @@ The second example is the structure with PDB code [6OM3](https://www.rcsb.org/st
 
 We opened in Chimera the original PDB, the unoptimized model and the optimized model respectively, since the -opt option was used here. Three pictures with the same orientation were taken for the sake of comparison. We can clearly see that in the optimized model there is less secondary structure than in the original model or the unoptimized model. That is because when trying to optimize the program tries to minimize the energy as much as possible but it does not respect as much the original strucutre. Therefore, we end up with a different strucutre but with lower energy profile:
 
-| <img src="images/6om3/6om3_original.png" width="150" height="150"> | <img src="images/6om3/6om3_model.png" width="150" height="150"> | <img src="images/6om3/6om3_model_optimized.png" width="150" height="150"> | <img src="images/6om3/6om3_model1_EnergyProfile_plot.png" width="150" height="150"> | 
+| <img src="images/6om3/6om3_original.png"> | <img src="images/6om3/6om3_model.png"> | <img src="images/6om3/6om3_model_optimized.png"> | <img src="images/6om3/6om3_model1_EnergyProfile_plot.png"> | 
 | :---: | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Optimized model*| *Energy profile* | 
 
@@ -114,13 +114,13 @@ This example is the structure with PDB code [5FJ8](https://www.rcsb.org/structur
 
 In this case, since the fasta option was used, the PDBs are being compared to it with a default identity threshold of 0.3 (-sit option was not used here). The results were analyzed in Chimera and we saved two images, the one in brown is the original PDB and the blue one is our model. They are fairly similar (the model has less secondary structure at the top right end), and the energy profiles of both the original PDB and the model confirm this. One could even say that the model is a bit better than the original file, since the model has less peaks over 0 kcal/mol.
 
-| <img src="images/5fj8/5fj8_original.png" width="250" height="250"> | <img src="images/5fj8/5fj8_model.png" width="250" height="250">|
+| <img src="images/5fj8/5fj8_original.png"> | <img src="images/5fj8/5fj8_model.png">|
 | :---: | :---: |
 | *Original* | *Unoptimized Model* | 
 
 Here we compared the two energy profiles, the one of the original structure and our model:
 
-| <img src="images/5fj8/5fj8_EnergyProfile_plot_original.png" width="250" height="250"> | <img src="images/5fj8/5fj8_model1_EnergyProfile_plot.png" width="250" height="250"> |
+| <img src="images/5fj8/5fj8_EnergyProfile_plot_original.png"> | <img src="images/5fj8/5fj8_model1_EnergyProfile_plot.png"> |
 | :---: | :---: |
 | *Original Energy profile* | *Model Energy profile* | 
 
@@ -131,7 +131,7 @@ The file with the PDB code [4G83](https://www.rcsb.org/structure/4g83) is the st
 
 We used a sequence identity threshold option of 0.2, to compare the fasta file with PDB, since after running the program several times we saw that the files were quite different, so we set this threshold to a rather low value. In the figure below, we can see the original PDB, our model and the superimposition, respectively. In this case superimposition between the original file and the model was done in Chimera. It is worth mentioning that, when they are superimposed, we cannot clearly differentiate between the two. That is because, when calculating the RMSD we could see that it was in fact of 0.000 angstroms. More specifically, the message that appeared in chimera was: RMSD between 198 pruned atom pairs is 0.000 angstroms; (across all 198 pairs: 0.000). In this specific example we did not choose the optimize funtion, so the energy profile calculated is based on the single model that we obtained as an output, and it can be seen below. The energy profile shows that almost all residues are below an energy of 0 kcal/mol, with a couple of exceptions, which is an indicator of a good model.
 
-| <img src="images/4g83/4g83_original.png" width="150" height="150"> | <img src="images/4g83/4g83_model.png" width="150" height="150"> | <img src="images/4g83/4g83_superimposed.png" width="150" height="150"> | <img src="images/4g83/4g83_model1_EnergyProfile_plot.png" width="150" height="150"> |
+| <img src="images/4g83/4g83_original.png"> | <img src="images/4g83/4g83_model.png"> | <img src="images/4g83/4g83_superimposed.png"> | <img src="images/4g83/4g83_model1_EnergyProfile_plot.png"> |
 | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Superimposed model* | *Energy profile* |
 
@@ -142,7 +142,7 @@ In this example we are looking at a structure of RNA polymerase-sigma54 holoenzy
 
 In this case we used the optimized option, so again, we obtain an unoptimized model and an optimized one. The models and the original file were visualized in Chimera, and one can see that the one in blue (optimized model) has far less secondary structre than the original PDB and the unoptimized model. Moreover, when taking a look at the energy profile graph, we can see that the optimized model has a lower overall energy. This is due to the fact that the optimization option prioritizes energy over structure.
 
-| <img src="images/5nss/5nss_original.png" width="150" height="150"> | <img src="images/5nss/5nss_model.png" width="150" height="150"> | <img src="images/5nss/5nss_model_optimized.png" width="150" height="150"> | <img src="images/5nss/5nss_model1_EnergyProfile_plot.png" width="150" height="150"> |
+| <img src="images/5nss/5nss_original.png"> | <img src="images/5nss/5nss_model.png"> | <img src="images/5nss/5nss_model_optimized.png"> | <img src="images/5nss/5nss_model1_EnergyProfile_plot.png"> |
 | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Optimized model* | *Energy profile* |
 
@@ -153,7 +153,7 @@ The last example is done with the PDB file [3T72](https://www.rcsb.org/structure
 
 In this last example one can see many subunits to the complex, and as it can be seen in the energy profile, the overall energy is quite high. Therefore this model, out of all the previous one, is the worst one. However, when comparing the original PDB file with the model we cannot see many differences. Superimposition was also not possible in this case, so the RMSD could not be calculated using Chimera.
 
-| <img src="images/3t72/3t72_original.png" width="200" height="200"> | <img src="images/3t72/3t72_model.png" width="200" height="200"> | <img src="images/3t72/3t72_model1_EnergyProfile_plot.png" width="200" height="200"> |
+| <img src="images/3t72/3t72_original.png"> | <img src="images/3t72/3t72_model.png"> | <img src="images/3t72/3t72_model1_EnergyProfile_plot.png"> |
 | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Energy profile* |
 
