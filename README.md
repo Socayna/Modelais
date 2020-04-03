@@ -91,7 +91,7 @@ The first example is the structure with PDB code [6GMH](https://www.rcsb.org/str
 
 Once Modelais has finished running, the model output is opened in Chimera. Below we can see that the model has less secondary structure than the original one but they are almost identical. The energy profile indicates that the model is quite good for the first 4000 residues (it has a low energy), but, from 4000 residues to 6000 residues the energy increases significantly.
 
-| <img src="images/6gmh/6gmh_original.png" width="200" height="200"> | <img src="images/6gmh/6gmh_model.png" width="200" height="200"> | <img src="images/6gmh/6gmh_model1_EnergyProfile_plot.png" width="200" height="200"> |
+| <img src="images/6gmh/6gmh_original.png" width="300" height="300"> | <img src="images/6gmh/6gmh_model.png" width="300" height="300"> | <img src="images/6gmh/6gmh_model1_EnergyProfile_plot.png" width="300" height="300"> |
 | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Energy profile*|
 
