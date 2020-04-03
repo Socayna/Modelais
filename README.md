@@ -6,7 +6,7 @@ Authors: Socayna Jouide, Ariadna Net and Iñigo Oyarzun
 ## Table of Contents:
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [Background](#background)
-	- [MODELAIS:](#modelais)
+	- [Modelais](#modelais)
 - [Installation, Requirements and Execution](#installation-requirements-and-execution)
 - [Modules](#modules)
 - [Analysis](#analysis)
