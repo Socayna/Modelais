@@ -21,6 +21,7 @@ Authors: Socayna Jouide, Ariadna Net and Iñigo Oyarzun
 
 <!-- /TOC -->
 <div style="text-align: justify"> 
+	
 ## Background
 Monomers are single chains of amino acids, and they are the building blocks of proteins. As a result of combining several monomers together, multimeric complexes (or macro-complexes) are formed. These complexes can be composed of identical subunits (homomeric) or non-identical subunits (heteromeric), and they may also be composed of a mixture of monomers as well as carbohydrates, RNA or DNA. The latter type of macro-complexes is of paramount importance in the cell, since they are mainly involved in catalysis and regulation. However, the molecular principles of multimeric proteins interactions are difficult to understand mainly due to the geometrical and chemical characteristics of proteins themselves (Lynch 2013).
 
