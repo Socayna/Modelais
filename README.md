@@ -3,7 +3,7 @@
 
 Authors: Socayna Jouide, Ariadna Net and Iñigo Oyarzun
 
-## *Table of Contents*:
+## Table of Contents:
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [Background](#background)
 	- [MODELAIS:](#modelais)
@@ -20,6 +20,7 @@ Authors: Socayna Jouide, Ariadna Net and Iñigo Oyarzun
 - [Bibliography](#bibliography)
 
 <!-- /TOC -->
+<div style="text-align: justify"> 
 ## Background
 Monomers are single chains of amino acids, and they are the building blocks of proteins. As a result of combining several monomers together, multimeric complexes (or macro-complexes) are formed. These complexes can be composed of identical subunits (homomeric) or non-identical subunits (heteromeric), and they may also be composed of a mixture of monomers as well as carbohydrates, RNA or DNA. The latter type of macro-complexes is of paramount importance in the cell, since they are mainly involved in catalysis and regulation. However, the molecular principles of multimeric proteins interactions are difficult to understand mainly due to the geometrical and chemical characteristics of proteins themselves (Lynch 2013).
 
@@ -37,7 +38,7 @@ The process goes on for several rounds, where in each round a different subunit 
 The output files are stored in a subdirectory inside a directory named results (see Installation, Requirements and Execution section for more information). The results include one macro-complex model that is ready to be further analysed by the user, a PNG file with the DOPE energy profile and its corresponding values in a txt file, and an INI file. The DOPE energy profile is built using modeller's and then using a window of 50 residues to smooth it in order to validate the model, and it is printed out for the user. If the optimization argument is used when executing Modelais, the results directory will also include four macro-complex models, and an optimized model. 
 
 ## Installation, Requirements and Execution
-The program can be downloaded from: https://github.com/ioyarzun/Modelais and installed with the `setup.py` script. 
+The program can be downloaded from: https://github.com/Socayna/modelais and installed with the `setup.py` script. 
 To install this package you must unzip this folder: `tar -xvzf modelais.tar`, and the run the next command: `sudo python3 setup.py install`. From the command line, it can be downloaded using: `bash pip install modelais`
 
 Before executing the program, there are several requirements that need to be taken into account:
@@ -101,7 +102,7 @@ The second example is the structure with PDB code [6OM3](https://www.rcsb.org/st
 
 We opened in Chimera the original PDB, the unoptimized model and the optimized model respectively, since the -opt option was used here. Three pictures with the same orientation were taken for the sake of comparison. We can clearly see that in the optimized model there is less secondary structure than in the original model or the unoptimized model. That is because when trying to optimize the program tries to minimize the energy as much as possible but it does not respect as much the original strucutre. Therefore, we end up with a different strucutre but with lower energy profile:
 
-| <img src="images/6om3/6om3_original.png" width="150" height="150"> | src="images/6om3/6om3_model.png" width="150" height="150"> | <src="img src="images/6om3/6om3_model_optimized.png" width="150" height="150"> | <img src="images/6om3/6om3_model1_EnergyProfile_plot.png" width="150" height="150"> | 
+| <img src="images/6om3/6om3_original.png" width="150" height="150"> | <img src="images/6om3/6om3_model.png" width="150" height="150"> | <img src="images/6om3/6om3_model_optimized.png" width="150" height="150"> | <img src="images/6om3/6om3_model1_EnergyProfile_plot.png" width="150" height="150"> | 
 | :---: | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Optimized model*| *Energy profile* | 
 
@@ -175,3 +176,4 @@ In this last example one can see many subunits to the complex, and as it can be 
 * Ethayathulla, Abdul S. et al. 2012. “Structure of P73 DNA-Binding Domain Tetramer Modulates P73 Transactivation.” Proceedings of the National Academy of Sciences of the United States of America.
 * Glyde, Robert et al. 2017. “Structures of RNA Polymerase Closed and Intermediate Complexes Reveal Mechanisms of DNA Opening and Transcription Initiation.” Molecular Cell.
 * Blanco, Alexandre G. et al. 2011. “The Structure of a Transcription Activation Subcomplex Reveals How Σ70 Is Recruited to PhoB Promoters.” EMBO Journal.
+</div>
