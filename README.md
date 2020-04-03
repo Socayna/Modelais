@@ -24,7 +24,7 @@ Authors: Socayna Jouide, Ariadna Net and Iñigo Oyarzun
 ## Background
 Monomers are single chains of amino acids, and they are the building blocks of proteins. As a result of combining several monomers together, multimeric complexes (or macro-complexes) are formed. These complexes can be composed of identical subunits (homomeric) or non-identical subunits (heteromeric), and they may also be composed of a mixture of monomers as well as carbohydrates, RNA or DNA. The latter type of macro-complexes is of paramount importance in the cell, since they are mainly involved in catalysis and regulation. However, the molecular principles of multimeric proteins interactions are difficult to understand mainly due to the geometrical and chemical characteristics of proteins themselves (Lynch 2013).
 
-The aim of this project is to develop a method to model the macro-complex structure of biomolecules, formed by proteins and DNA.  That is, the program developed assembles a multimeric protein from different polypeptide chains given by Protein Data Bank (PDB) and the corresponding DNA attached to it. In this section, an overview of the Modelais program developed to assemble this kind of macro-complexes is given. 
+The aim of this project is to develop a method to model the macro-complex structure of biomolecules, formed by proteins and DNA.  That is, the program developed assembles a multimeric protein from different polypeptide chains given by Protein Data Bank (PDB) and the corresponding DNA attached to it. In this section, an overview of the Modelais program developed to assemble this kind of macro-complexes is given.
 
 ### Modelais
 In the very beginning, the program will look for the input files that end with the “.pdb” extension in the specified folder, to process them. These files include the protein and DNA sequences desired to model, and the structures of the protein-protein and protein-DNA interactions. For the input files that are found, the function gets its chains and it assigns them a unique chain ID. Chains are aligned, and those that share a 95% of similarity or more are kept in a dictionary, while those that do not meet this requirement are removed. The dictionary has the chain ID as keys and the paired chains as values.
@@ -73,11 +73,11 @@ Once everything is saved and the requirements are met, Modelais can be executed 
 
 ## Modules
 The different modules needed to run Modelais are:
-* `__main__.py`: It contains the core of the program; it is the one that needs to be executed. Many of its actions depend on functions defined on other scripts.
-* `optimize.py`: It takes as an input the model computed with `modelais.py` and gives as an output the optimized model and an energy profile graph.
+* `__main__.py`: It contains the core of the program; it is the one that needs to be executed. Many of its actions depend on functions defined on other scripts. 
+* `optimize.py`: It takes as an input the model computed with `__main__.py` and gives as an output the optimized model and an energy profile graph.
 * `messages.py`: Contains the messages shown when verbose option is used.
 * `utils.py`: Contains all the functions needed for the main script to function.
-* `arguments.py`: Contains all the arguments that can be used by the user when executing `modelais.py`.
+* `arguments.py`: Contains all the arguments that can be used by the user when executing `__main__.py`.
 * `plotting.py`: Allows the plotting of the energy profile and gives as a result a “.png” file.
 * `interface.py`: Launches a graphical interface to get the options from the user.
 
