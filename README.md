@@ -27,7 +27,7 @@ Monomers are single chains of amino acids, and they are the building blocks of p
 
 The aim of this project is to develop a method to model the macro-complex structure of biomolecules, formed by proteins and DNA.  That is, the program developed assembles a multimeric protein from different polypeptide chains given by Protein Data Bank (PDB) and the corresponding DNA attached to it. In this section, an overview of the Modelais program developed to assemble this kind of macro-complexes is given.
 
-### MODELAIS:
+### Modelais
 In the very beginning, the program will look for the input files that end with the “.pdb” extension in the specified folder, to process them. These files include the protein and DNA sequences desired to model, and the structures of the protein-protein and protein-DNA interactions. For the input files that are found, the function gets its chains and it assigns them a unique chain ID. Chains are aligned, and those that share a 95% of similarity or more are kept in a dictionary, while those that do not meet this requirement are removed. The dictionary has the chain ID as keys and the paired chains as values.
 
 The next step is the the macro-complex construction, which is built by superimposition in several rounds. The first round is done by selecting a random pair of chains from the dictionary and making a complex out of them. Then, the program chooses one of the two chains and looks for similar pairs of chains in the dictionary to add them to the complex (either DNA or protein, whatever was randomly chosen first). These chains can now be referred as subunits since they are the building blocks of the complex.  The coordinates of the other subunit, the one that is not selected, are modified to fit the complex. In order to actually add the chains to the complex the superimposition between chains needs to have a filter for steric clashes.
@@ -132,7 +132,7 @@ The file with the PDB code [4G83](https://www.rcsb.org/structure/4g83) is the st
 We used a sequence identity threshold option of 0.2, to compare the fasta file with PDB, since after running the program several times we saw that the files were quite different, so we set this threshold to a rather low value. In the figure below, we can see the original PDB, our model and the superimposition, respectively. In this case superimposition between the original file and the model was done in Chimera. It is worth mentioning that, when they are superimposed, we cannot clearly differentiate between the two. That is because, when calculating the RMSD we could see that it was in fact of 0.000 angstroms. More specifically, the message that appeared in chimera was: RMSD between 198 pruned atom pairs is 0.000 angstroms; (across all 198 pairs: 0.000). In this specific example we did not choose the optimize funtion, so the energy profile calculated is based on the single model that we obtained as an output, and it can be seen below. The energy profile shows that almost all residues are below an energy of 0 kcal/mol, with a couple of exceptions, which is an indicator of a good model.
 
 | <img src="images/4g83/4g83_original.png"> | <img src="images/4g83/4g83_model.png"> | <img src="images/4g83/4g83_superimposed.png"> | <img src="images/4g83/4g83_model1_EnergyProfile_plot.png"> |
-| :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Superimposed model* | *Energy profile* |
 
 ### 5nss
@@ -143,7 +143,7 @@ In this example we are looking at a structure of RNA polymerase-sigma54 holoenzy
 In this case we used the optimized option, so again, we obtain an unoptimized model and an optimized one. The models and the original file were visualized in Chimera, and one can see that the one in blue (optimized model) has far less secondary structre than the original PDB and the unoptimized model. Moreover, when taking a look at the energy profile graph, we can see that the optimized model has a lower overall energy. This is due to the fact that the optimization option prioritizes energy over structure.
 
 | <img src="images/5nss/5nss_original.png"> | <img src="images/5nss/5nss_model.png"> | <img src="images/5nss/5nss_model_optimized.png"> | <img src="images/5nss/5nss_model1_EnergyProfile_plot.png"> |
-| :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 | *Original* | *Unoptimized Model* | *Optimized model* | *Energy profile* |
 
 ### 3t72
