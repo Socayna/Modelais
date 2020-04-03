@@ -13,5 +13,5 @@ setup(name='MODELAIS',
       packages=['modelais'],
       author='Socayna Jouide, Ariadna Net, Iñigo Oyarzun',
       author_email='socayna.jouide01@estudiant.upf.edu, ariadna.net01@estudiant.upf.edu, inigo.oyarzun01@estudiant.upf.edu',
-      install_requires=['biopython', 'gooey', 'matplotlib', 'pandas', 'modeller'],
+      install_requires=['biopython', 'gooey', 'matplotlib', 'pandas'],
       include_package_data=True)
