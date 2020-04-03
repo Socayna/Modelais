@@ -39,7 +39,8 @@ The output files are stored in a subdirectory inside a directory named results (
 
 ## Installation, Requirements and Execution
 The program can be downloaded from: https://github.com/Socayna/modelais and installed with the `setup.py` script. 
-To install this package you must unzip this folder and the run the next command: `sudo python3 setup.py install`. From the command line, it can be downloaded using: `bash pip install modelais`
+To install this package you must unzip this folder and then run the next command: `sudo python3 setup.py install`. Another way of doing it is as it is done for the examples stated below: `python3 modelais.py [arguments]`.
+
 
 Before executing the program, there are several requirements that need to be taken into account:
 -	A directory with subdirectories containing the PDB files wished to analyse need to be present. Note that the path to the PDB files has to be specified in the command line using the following structure: directory/subdirectory.
@@ -48,9 +49,9 @@ Before executing the program, there are several requirements that need to be tak
 - 	Biopython has to be installed to parse PDB files.
 - 	Pandas package has to be installed to be able to work with different kinds of data used in Modelais.
 -	Gooey is necessary to be able build the graphical user interface.
--	Modeller 9.23 has to be installed to be able to construct the complex and create the DOPE energy profile. It can be downloaded from [!here](https://salilab.org/modeller/download_installation.html).
+-	Modeller 9.23 has to be installed to be able to construct the complex and create the DOPE energy profile. It can be downloaded from [here](https://salilab.org/modeller/download_installation.html).
 -	Matplotlib needs to be installed to be able to plot the DOPE profile energy for each model.
--	The USCF chimera application should be installed if the chimera option is used when executing the program. It can be downloaded from [!here](https://www.cgl.ucsf.edu/chimera/download.html).
+-	The USCF chimera application should be installed if the chimera option is used when executing the program. It can be downloaded from [here](https://www.cgl.ucsf.edu/chimera/download.html).
 
 The options that come with `modelais.py` are specified in `arguments.py`, but a summary of the mandatory and optional arguments is shown here:
 Mandatory arguments:
