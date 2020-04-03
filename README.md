@@ -39,7 +39,7 @@ The output files are stored in a subdirectory inside a directory named results (
 
 ## Installation, Requirements and Execution
 The program can be downloaded from: https://github.com/Socayna/modelais and installed with the `setup.py` script. 
-To install this package you must unzip this folder and then run the next command: `sudo python3 setup.py install`. Another way of doing it is as it is done for the examples stated below: `python3 modelais.py [arguments]`.
+To install this package you must unzip this folder and then run the next command: `sudo python3 setup.py install`. Another way of doing it is as it is done for the examples stated below: `python3 __main__.py [arguments]`.
 
 
 Before executing the program, there are several requirements that need to be taken into account:
@@ -53,7 +53,7 @@ Before executing the program, there are several requirements that need to be tak
 -	Matplotlib needs to be installed to be able to plot the DOPE profile energy for each model.
 -	The USCF chimera application should be installed if the chimera option is used when executing the program. It can be downloaded from [here](https://www.cgl.ucsf.edu/chimera/download.html).
 
-The options that come with `modelais.py` are specified in `arguments.py`, but a summary of the mandatory and optional arguments is shown here:
+The options that come with `__main__.py` are specified in `arguments.py`, but a summary of the mandatory and optional arguments is shown here:
 Mandatory arguments:
 * `-i, --pdb`: Path with all the base pdb files to use.
 * `-o, --output`: Name of the output.
@@ -69,11 +69,11 @@ Optional arguments
 * `-c, --chimera`: Open models in Chimera automatically at the end of the execution of the program (in alphabetical order).
 * `-gui, --graphic_interface`: Graphic user interface mode. The graphic interface consists of one window asking for the parameters and inputs, and after pressing Start, a shell window will appear on the screen showing the evolution of the program, as in the terminal. The user is able to go back to the input screen to restart the program when it has started the execution. Once the program is finished successfully, a green tick on the top right will appear together with a message, if not, a red cross will be displayed in the same spot.
 
-Once everything is saved and the requirements are met, Modelais can be executed using the following command: `python3 modelais.py [options]`.
+Once everything is saved and the requirements are met, Modelais can be executed using the following command: `python3 __main__.py [options]`.
 
 ## Modules
 The different modules needed to run Modelais are:
-* `modelais.py`: It contains the core of the program; it is the one that needs to be executed. Many of its actions depend on functions defined on other scripts.
+* `__main__.py`: It contains the core of the program; it is the one that needs to be executed. Many of its actions depend on functions defined on other scripts.
 * `optimize.py`: It takes as an input the model computed with `modelais.py` and gives as an output the optimized model and an energy profile graph.
 * `messages.py`: Contains the messages shown when verbose option is used.
 * `utils.py`: Contains all the functions needed for the main script to function.
@@ -87,7 +87,7 @@ In the analysis section, we execute the Modelais program with the proposed struc
 ### 6gmh
 The first example is the structure with PDB code [6GMH](https://www.rcsb.org/structure/6gmh), which is the activated transcription complex Pol II-DSIF-PAF-SPT6, involved in gene regulation. It has 20 unique protein chains and 3 unique nucleic acid chains (Vos et al. 2018). With Modelais we modelled this complex and compared it to the original PDB file using the following command:
 
-`python3 modelais.py -i examples/6gmh -o 6gmh_model -fo pdb -v -fa examples/6gmh/6gmh.fasta.txt -sit 0.2 -c`
+`python3 __main__.py -i examples/6gmh -o 6gmh_model -fo pdb -v -fa examples/6gmh/6gmh.fasta.txt -sit 0.2 -c`
 
 Once Modelais has finished running, the model output is opened in Chimera. Below we can see that the model has less secondary structure than the original one but they are almost identical. The energy profile indicates that the model is quite good for the first 4000 residues (it has a low energy), but, from 4000 residues to 6000 residues the energy increases significantly.
 
@@ -99,7 +99,7 @@ Once Modelais has finished running, the model output is opened in Chimera. Below
 ### 6om3
 The second example is the structure with PDB code [6OM3](https://www.rcsb.org/structure/6om3), which is a crystal structure of the Orc1 BAH domain in complex with a nucleosome core particle. It contains 5 unique protein chains and 2 unique nucleic acid chains. This macrocomplex is essential for replication, heterochromatin formation, telomere maintenance and genome stability in eukaryotes (De Ioannes et al. 2019). With Modelais we modelled this complex and compared it to the original PDB file using the following command:
 
-`python3 modelais.py -i examples/6om3 -o 6om3_model -fo pdb -v -opt -c`
+`python3 __main__.py -i examples/6om3 -o 6om3_model -fo pdb -v -opt -c`
 
 We opened in Chimera the original PDB, the unoptimized model and the optimized model respectively, since the -opt option was used here. Three pictures with the same orientation were taken for the sake of comparison. We can clearly see that in the optimized model there is less secondary structure than in the original model or the unoptimized model. That is because when trying to optimize the program tries to minimize the energy as much as possible but it does not respect as much the original strucutre. Therefore, we end up with a different strucutre but with lower energy profile:
 
@@ -110,7 +110,7 @@ We opened in Chimera the original PDB, the unoptimized model and the optimized m
 ### 5fj8
 This example is the structure with PDB code [5FJ8](https://www.rcsb.org/structure/5fj8), which is a structure of the yeast RNA polymerase III elongation complex with 17 unique proteic chains and 3 nucleic acid chains. Transcription of genes encoding small structured RNAs (transfer RNAs, nuclear RNA and ribosomal RNA) is carried out by RNA polymerase III (Pol III), the largest yet structurally least characterized eukaryotic RNA polymerase (Hoffmann et al. 2015). With Modelais we modelled this complex and compared it to the original PDB file using the following command:
 
-`python3 modelais.py -i examples/5fj8 -o 5fj8_model -fo pdb -v -fa examples/5fj8/5fj8.fasta.txt -c`
+`python3 __main__.py -i examples/5fj8 -o 5fj8_model -fo pdb -v -fa examples/5fj8/5fj8.fasta.txt -c`
 
 In this case, since the fasta option was used, the PDBs are being compared to it with a default identity threshold of 0.3 (-sit option was not used here). The results were analyzed in Chimera and we saved two images, the one in brown is the original PDB and the blue one is our model. They are fairly similar (the model has less secondary structure at the top right end), and the energy profiles of both the original PDB and the model confirm this. One could even say that the model is a bit better than the original file, since the model has less peaks over 0 kcal/mol.
 
@@ -127,7 +127,7 @@ Here we compared the two energy profiles, the one of the original structure and 
 ### 4g83
 The file with the PDB code [4G83](https://www.rcsb.org/structure/4g83) is the structure of a DNA-binding protein, more specifically, the p73 DNA-binding domain tetramer bound to a full response-element. This is the smallest complex out of all the examples, containing only 1 unique protein chain and 1 unique nucleic acid chain (Ethayathulla et al. 2012). With Modelais, we modelled this complex and compared it to the original PDB file using the following command:
 
-`python3 modelais.py -i examples/4g83 -o 4g83_model -fo pdb -v -fa examples/4g83/4g83.fasta.txt -sit 0.2 -c`
+`python3 __main__.py -i examples/4g83 -o 4g83_model -fo pdb -v -fa examples/4g83/4g83.fasta.txt -sit 0.2 -c`
 
 We used a sequence identity threshold option of 0.2, to compare the fasta file with PDB, since after running the program several times we saw that the files were quite different, so we set this threshold to a rather low value. In the figure below, we can see the original PDB, our model and the superimposition, respectively. In this case superimposition between the original file and the model was done in Chimera. It is worth mentioning that, when they are superimposed, we cannot clearly differentiate between the two. That is because, when calculating the RMSD we could see that it was in fact of 0.000 angstroms. More specifically, the message that appeared in chimera was: RMSD between 198 pruned atom pairs is 0.000 angstroms; (across all 198 pairs: 0.000). In this specific example we did not choose the optimize funtion, so the energy profile calculated is based on the single model that we obtained as an output, and it can be seen below. The energy profile shows that almost all residues are below an energy of 0 kcal/mol, with a couple of exceptions, which is an indicator of a good model.
 
@@ -138,7 +138,7 @@ We used a sequence identity threshold option of 0.2, to compare the fasta file w
 ### 5nss
 In this example we are looking at a structure of RNA polymerase-sigma54 holoenzyme, which is encoded by the PDB code [5NSS](https://www.rcsb.org/structure/5nss). It has 6 unique protein chains and 2 nucleic acid chains. This complex allows gene transcription to be carried out by RNA polymerase, since it allows the isomerazitation of the promoter complex (Glyde et al. 2017). With Modelais, we modelled this complex and compared it to the original PDB file using the following command:
 
-`python3 modelais.py -i examples/5nss -o 5nss_model -fo pdb -v -opt`
+`python3 __main__.py -i examples/5nss -o 5nss_model -fo pdb -v -opt`
 
 In this case we used the optimized option, so again, we obtain an unoptimized model and an optimized one. The models and the original file were visualized in Chimera, and one can see that the one in blue (optimized model) has far less secondary structre than the original PDB and the unoptimized model. Moreover, when taking a look at the energy profile graph, we can see that the optimized model has a lower overall energy. This is due to the fact that the optimization option prioritizes energy over structure.
 
@@ -149,7 +149,7 @@ In this case we used the optimized option, so again, we obtain an unoptimized mo
 ### 3t72
 The last example is done with the PDB file [3T72](https://www.rcsb.org/structure/3t72), which is a transcription activation sub-complex with 2 unique protein chains and 2 unique nucleic acid chains. It's a two-component response regulator that activates transcription by interacting with the a subunit of the *E. coli* RNA polymerase in promoters (Blanco et al. 2011). With Modelais, we modelled this complex and compared it to the original PDB file using the following command:
 
-`python3 modelais.py -i examples/3t72 -o 3t72_model -fo pdb -v -fa examples/3t72/3t72.fasta.txt -sit 0.2`
+`python3 __main__.py -i examples/3t72 -o 3t72_model -fo pdb -v -fa examples/3t72/3t72.fasta.txt -sit 0.2`
 
 In this last example one can see many subunits to the complex, and as it can be seen in the energy profile, the overall energy is quite high. Therefore this model, out of all the previous one, is the worst one. However, when comparing the original PDB file with the model we cannot see many differences. Superimposition was also not possible in this case, so the RMSD could not be calculated using Chimera.
 
